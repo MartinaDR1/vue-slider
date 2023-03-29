@@ -28,5 +28,21 @@ createApp({
             }
         ],
     }
-  }
+    }, 
+    methods:{
+        next(){
+            console.log('click');
+            this.activeImage++
+            if(this.activeImage=== this.images.length){
+                this.activeImage=0
+            }
+        },
+        prev(){
+            console.log('click');
+            this.activeImage--
+            if(this.activeImage < 0){
+                this.activeImage = this.images.length - 1
+            }
+        }
+    } 
 }).mount('#app')
