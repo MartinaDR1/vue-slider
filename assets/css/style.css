@@ -1,3 +1,8 @@
+body{
+    background-color: rgb(250, 250, 249);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
 .container {
     margin: 1rem auto;
 }
@@ -14,21 +19,6 @@
     object-fit: cover;
 }
 
-.thumbs {
-    height: 100%;
-}
-
-.thumbs > img {
-    height: calc(100% / 5);
-    width: 150px;
-    object-fit: cover;
-}
-
-.thumbs img:not(.active)
-{
-	opacity: 0.5;
-}
-
 .details {
     position: absolute;
     bottom: 20px;
@@ -37,11 +27,26 @@
     max-width: 700px;
 }
 
-nav {
-    /*position: absolute;
+/*Thumb*/
+.thumbs {
     height: 100%;
-    top: 0;
-    right: 1.5rem;*/
+}
+
+.thumbs > img {
+    height: calc(100% / 5);
+    width: 150px;
+    object-fit: cover;
+    border: 3px solid lightgrey;
+}
+
+.thumbs img:not(.active)
+{
+	opacity: 0.5;
+}
+
+/*Nav*/
+
+nav {
     position: absolute;
 	right: 0px;
 	

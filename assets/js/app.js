@@ -30,6 +30,7 @@ createApp({
     }
     }, 
     methods:{
+        //Attivo i bottoni next e prev
         next(){
             console.log('click');
             this.activeImage++
@@ -44,6 +45,13 @@ createApp({
                 this.activeImage = this.movies.image.length - 1
             }
         },
+
+        //Rendo cliccabili le immagini della thumb
+        clickThumb(index) {
+            this.activeImage = index
+        },
+
+        //Gestisco l'autoplay
         stop(){
             clearInterval(this.autoplay)
         },
@@ -52,9 +60,7 @@ createApp({
                 this.next();
             }, 3000);
         },
-        clickThumb(index) {
-            this.activeImage = index
-        },
+        
         
     }, 
     mounted() {
