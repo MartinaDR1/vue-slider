@@ -10,7 +10,7 @@
 }
 
 .container_xs > img {
-    width: 100%;
+    width: 90%;
     object-fit: cover;
 }
 
@@ -24,6 +24,11 @@
     object-fit: cover;
 }
 
+.thumbs img:not(.active)
+{
+	opacity: 0.5;
+}
+
 .details {
     position: absolute;
     bottom: 20px;
@@ -33,10 +38,15 @@
 }
 
 nav {
-    position: absolute;
+    /*position: absolute;
     height: 100%;
     top: 0;
-    right: 1.5rem;
+    right: 1.5rem;*/
+    position: absolute;
+	right: 0px;
+	
+	height: 100%;
+	
 }
 
 nav > button {

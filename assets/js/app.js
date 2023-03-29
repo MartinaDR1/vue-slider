@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
         activeImage: 0,
-        images : [
+        movies : [
             {
                 image: './assets/img/01.webp',
                 title: 'Marvel\'s Spiderman Miles Morale',
@@ -33,7 +33,7 @@ createApp({
         next(){
             console.log('click');
             this.activeImage++
-            if(this.activeImage=== this.images.length){
+            if(this.activeImage=== this.movies.length){
                 this.activeImage=0
             }
         },
@@ -41,8 +41,13 @@ createApp({
             console.log('click');
             this.activeImage--
             if(this.activeImage < 0){
-                this.activeImage = this.images.length - 1
+                this.activeImage = this.movies.image.length - 1
             }
         }
-    } 
+    }, 
+    mounted() {
+        this.autoPlay = setInterval (() => {
+            this.next();
+        }, 3000);
+    }
 }).mount('#app')
