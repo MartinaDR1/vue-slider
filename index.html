@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="thumbs d-flex flex-column" >
-                    <img :class="index === activeImage ? 'active' : ''" :src="movies[index].image" alt="" v-for="(image, index) in movies">
+                    <img @click="clickThumb(index)" :class="index === activeImage ? 'active' : ''" :src="movies[index].image" alt="" v-for="(image, index) in movies">
                     
                     
                     <nav class="d-flex flex-column justify-content-between">

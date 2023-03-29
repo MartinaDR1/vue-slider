@@ -51,7 +51,10 @@ createApp({
             this.autoplay = setInterval (() => {
                 this.next();
             }, 3000);
-        }
+        },
+        clickThumb(index) {
+            this.activeImage = index
+        },
         
     }, 
     mounted() {
