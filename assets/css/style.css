@@ -1,0 +1,49 @@
+.container {
+    margin: 1rem auto;
+}
+
+.container_xs{
+    position: relative;
+    height: 600px;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.container_xs > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.thumbs {
+    height: 100%;
+}
+
+.thumbs > img {
+    height: calc(100% / 5);
+    width: 150px;
+    object-fit: cover;
+}
+
+.details {
+    position: absolute;
+    bottom: 20px;
+    right: 160px;
+    z-index: 1000;
+    max-width: 700px;
+}
+
+nav {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 1.5rem;
+}
+
+nav > button {
+   border: 0;
+   border-radius: 50%;
+   width: 2rem;
+   aspect-ratio: 1 / 1;
+   margin: 0.5rem;
+   background-color: rgba(255, 255, 255, 0.61);
+}
