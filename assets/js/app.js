@@ -43,10 +43,19 @@ createApp({
             if(this.activeImage < 0){
                 this.activeImage = this.movies.image.length - 1
             }
+        },
+        stop(){
+            clearInterval(this.autoplay)
+        },
+        play(){
+            this.autoplay = setInterval (() => {
+                this.next();
+            }, 3000);
         }
+        
     }, 
     mounted() {
-        this.autoPlay = setInterval (() => {
+        this.autoplay = setInterval (() => {
             this.next();
         }, 3000);
     }
